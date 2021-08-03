@@ -1,0 +1,90 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int u_input; int amount = 0, count = 0;
+	int car = 0, bus = 0, rickshaw = 0, bike = 0;
+
+
+	// menu
+	while (true) {
+		cout << "\n\n Welcome To NAGAR NIGAM Vehicle Parking System!!\n" << endl;
+		cout << "\t\tPress 1 for Rickshaw" << endl;
+		cout << "\t\tPress 2 for Car" << endl;
+		cout << "\t\tPress 3 for Bus" << endl;
+		cout << "\t\tPress 4 for Bike" << endl;
+		cout << "\t\tPress 5 to Show Record" << endl;
+		cout << "\t\tPress 6 to Delete Record" << endl;
+
+		cin >> u_input;
+		if (u_input == 1)
+		{
+			if (count <= 50) {
+
+				amount = amount + 100;
+				count = count + 1;
+				rickshaw = rickshaw + 1;
+			}
+			else
+				cout << "No More parking allowed !X!<<endl";
+		}
+		else if (u_input == 2)
+		{
+			if (count <= 50) {
+				amount = amount + 200;
+				count = count + 1;
+				car = car + 1;
+			}
+			else
+				cout << "No more parking allowed !X!<< endl";
+		}
+		else if (u_input == 3)
+		{
+			if (count <= 50) {
+				amount = amount + 300;
+				count = count + 1;
+				bus = bus + 1;
+			}
+			else
+				cout << "No more parking allowed !X!" << endl;
+		}
+		else if (u_input == 4)
+		{
+			if (count <= 50) {
+				amount = amount + 300;
+				count = count + 1;
+				bike = bike + 1;
+			}
+			else
+				cout << "No more parking allowed !X!" << endl;
+		}
+		else if (u_input == 5)
+		{
+			cout << "*************************************" << endl;
+			cout << "The total amount = " << amount << endl;
+			cout << "The total number of Vehicals Parked = " << count << endl;
+			cout << "The total number of Cars = " << car << endl;
+			cout << "The total number of Buses = " << bus << endl;
+			cout << "The total number of Rickshaws = " << rickshaw << endl;
+			cout << "The total number of Bikes = " << bike << endl;
+			cout << "*************************************" << "\t\t";
+		}
+		else if (u_input == 6)
+		{
+			cout << "*************************************" << endl;
+			amount = 0;
+			count = 0;
+			car = 0;
+			bus = 0;
+			rickshaw = 0;
+			bike = 0;
+			cout << "*************************************" << endl;
+			cout << "Record Deleted" << endl;
+			cout << "*************************************" << endl;
+		}
+		else {
+			cout << "Invalid input!!" << endl;
+		}
+	}
+	return 0;
+}
